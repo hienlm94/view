@@ -18,7 +18,9 @@ router.post('/get-data', function (req, res) {
     var options = {
         desiredCapabilities: {
             browserName: 'chrome',
-            chromeOptions: {}
+            chromeOptions: {
+                'binary': "/usr/bin/chromium-browser",
+            }
         }
     };
 
