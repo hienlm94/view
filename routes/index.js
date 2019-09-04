@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express' });
 });
 
 router.post('/get-data', function (req, res) {
@@ -20,6 +20,7 @@ router.post('/get-data', function (req, res) {
             browserName: 'chrome',
             chromeOptions: {
                 'binary': "/usr/bin/chromium-browser",
+                "args": ['headless', '--disable-dev-shm-usage' ,'--disable-gpu']
             }
         }
     };
